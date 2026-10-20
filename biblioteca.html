@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#080d19" />
+    <meta
+      name="description"
+      content="GameHub — universo de jogos fictícios com catálogo, coleções, favoritos e biblioteca interativa."
+    />
+    <title>Biblioteca | GameHub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="biblioteca">
+    <header class="topbar">
+      <div class="shell navwrap">
+        <a href="index.html" class="brand"
+          ><span class="brand-icon">◈</span>GAME<span>HUB</span
+          ><small>PLAY THE FUTURE</small></a
+        ><button
+          id="menuBtn"
+          class="menu-btn"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <nav id="nav" class="nav">
+          <a href="index.html" class="">Início</a
+          ><a href="catalogo.html" class="">Catálogo</a
+          ><a href="colecoes.html" class="">Coleções</a
+          ><a href="rankings.html" class="">Rankings</a
+          ><a href="favoritos.html" class="">Favoritos</a
+          ><a href="biblioteca.html" class="active">Biblioteca</a
+          ><a href="sobre.html" class="">Sobre</a>
+        </nav>
+        <a href="biblioteca.html" class="nav-action"
+          >Minha coleção <span id="headerCount">0</span></a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="shell page-intro">
+        <span class="eyebrow">SUA COLEÇÃO PESSOAL</span>
+        <h1>Minha <em>biblioteca.</em></h1>
+        <p>Organize os universos que fazem parte da sua jornada.</p>
+      </section>
+      <section class="shell section">
+        <div class="stats-grid" id="libraryStats"></div>
+        <div class="library-toolbar">
+          <div>
+            <h2>Minha coleção</h2>
+            <p>Adicione jogos pelo catálogo e marque seu progresso.</p>
+          </div>
+          <label class="sr-only" for="libFilter">Filtrar biblioteca</label
+          ><select id="libFilter">
+            <option value="all">Todos os jogos</option>
+            <option value="want">Quero jogar</option>
+            <option value="playing">Jogando</option>
+            <option value="done">Concluídos</option>
+          </select>
+        </div>
+        <div id="libGrid" class="game-grid"></div>
+        <div id="libEmpty" class="empty-state" hidden>
+          <span class="empty-icon">◈</span>
+          <h2>Sua aventura começa aqui</h2>
+          <p>Adicione jogos à sua biblioteca e acompanhe seu progresso.</p>
+          <a href="catalogo.html" class="btn primary">Explorar catálogo →</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <div>
+          <a href="index.html" class="brand mini">◈ GAME<span>HUB</span></a>
+          <p>
+            Explore outros mundos. Um projeto demonstrativo, sem compras reais.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="catalogo.html">Catálogo</a
+          ><a href="colecoes.html">Coleções</a><a href="sobre.html">Sobre</a
+          ><a
+            href="https://github.com/JefersonAlvesrs"
+            target="_blank"
+            rel="noopener"
+            >Desenvolvido por Jeferson Alves ↗</a
+          >
+        </div>
+      </div>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

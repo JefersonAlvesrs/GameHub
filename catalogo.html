@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#080d19" />
+    <meta
+      name="description"
+      content="GameHub — universo de jogos fictícios com catálogo, coleções, favoritos e biblioteca interativa."
+    />
+    <title>Catálogo | GameHub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="catalogo">
+    <header class="topbar">
+      <div class="shell navwrap">
+        <a href="index.html" class="brand"
+          ><span class="brand-icon">◈</span>GAME<span>HUB</span
+          ><small>PLAY THE FUTURE</small></a
+        ><button
+          id="menuBtn"
+          class="menu-btn"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <nav id="nav" class="nav">
+          <a href="index.html" class="">Início</a
+          ><a href="catalogo.html" class="active">Catálogo</a
+          ><a href="colecoes.html" class="">Coleções</a
+          ><a href="rankings.html" class="">Rankings</a
+          ><a href="favoritos.html" class="">Favoritos</a
+          ><a href="biblioteca.html" class="">Biblioteca</a
+          ><a href="sobre.html" class="">Sobre</a>
+        </nav>
+        <a href="biblioteca.html" class="nav-action"
+          >Minha coleção <span id="headerCount">0</span></a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="shell page-intro">
+        <span class="eyebrow">EXPLORE O DESCONHECIDO</span>
+        <h1>Catálogo de <em>jogos.</em></h1>
+        <p>Encontre sua próxima aventura entre 24 mundos originais.</p>
+      </section>
+      <section class="shell catalog-layout">
+        <aside class="filter-panel">
+          <div class="filter-title">
+            <h3>Filtros</h3>
+            <button id="resetFilters" class="link-button">Limpar</button>
+          </div>
+          <label for="search">Pesquisar</label
+          ><input
+            id="search"
+            type="search"
+            placeholder="Nome ou palavra-chave…"
+          /><label for="genre">Gênero</label
+          ><select id="genre">
+            <option value="">Todos os gêneros</option></select
+          ><label for="price">Preço</label
+          ><select id="price">
+            <option value="">Todos</option>
+            <option value="free">Gratuitos</option>
+            <option value="paid">Pagos</option>
+            <option value="under60">Até R$ 60</option></select
+          ><label for="sort">Ordenar por</label
+          ><select id="sort">
+            <option value="popular">Destaques</option>
+            <option value="rating">Melhor avaliação</option>
+            <option value="recent">Mais recentes</option>
+            <option value="low">Menor preço</option>
+            <option value="high">Maior preço</option>
+            <option value="name">Nome A–Z</option>
+          </select>
+          <div class="filter-note">
+            ◈ Seus favoritos e sua biblioteca ficam salvos neste navegador.
+          </div>
+        </aside>
+        <div>
+          <div class="results-head">
+            <div>
+              <strong id="resultsCount">24 jogos</strong
+              ><span>Seleção de universos</span>
+            </div>
+            <div class="catalog-note">✦ Catálogo fictício</div>
+          </div>
+          <div id="catalogGrid" class="game-grid catalog-grid"></div>
+          <div id="emptyState" class="empty-state" hidden>
+            <strong>Nenhum jogo encontrado</strong>
+            <p>Tente alterar sua busca ou os filtros.</p>
+            <button id="emptyReset" class="btn ghost">Limpar filtros</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <div>
+          <a href="index.html" class="brand mini">◈ GAME<span>HUB</span></a>
+          <p>
+            Explore outros mundos. Um projeto demonstrativo, sem compras reais.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="catalogo.html">Catálogo</a
+          ><a href="colecoes.html">Coleções</a><a href="sobre.html">Sobre</a
+          ><a
+            href="https://github.com/JefersonAlvesrs"
+            target="_blank"
+            rel="noopener"
+            >Desenvolvido por Jeferson Alves ↗</a
+          >
+        </div>
+      </div>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

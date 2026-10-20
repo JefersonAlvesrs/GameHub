@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#080d19" />
+    <meta
+      name="description"
+      content="GameHub — universo de jogos fictícios com catálogo, coleções, favoritos e biblioteca interativa."
+    />
+    <title>Rankings | GameHub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="rankings">
+    <header class="topbar">
+      <div class="shell navwrap">
+        <a href="index.html" class="brand"
+          ><span class="brand-icon">◈</span>GAME<span>HUB</span
+          ><small>PLAY THE FUTURE</small></a
+        ><button
+          id="menuBtn"
+          class="menu-btn"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <nav id="nav" class="nav">
+          <a href="index.html" class="">Início</a
+          ><a href="catalogo.html" class="">Catálogo</a
+          ><a href="colecoes.html" class="">Coleções</a
+          ><a href="rankings.html" class="active">Rankings</a
+          ><a href="favoritos.html" class="">Favoritos</a
+          ><a href="biblioteca.html" class="">Biblioteca</a
+          ><a href="sobre.html" class="">Sobre</a>
+        </nav>
+        <a href="biblioteca.html" class="nav-action"
+          >Minha coleção <span id="headerCount">0</span></a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="shell page-intro">
+        <span class="eyebrow">OS FAVORITOS DA PLATAFORMA</span>
+        <h1>Hall da <em>fama.</em></h1>
+        <p>Classificação ilustrativa dos jogos fictícios mais bem avaliados.</p>
+      </section>
+      <section class="shell section">
+        <div id="rankingsList" class="ranking-list"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <div>
+          <a href="index.html" class="brand mini">◈ GAME<span>HUB</span></a>
+          <p>
+            Explore outros mundos. Um projeto demonstrativo, sem compras reais.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="catalogo.html">Catálogo</a
+          ><a href="colecoes.html">Coleções</a><a href="sobre.html">Sobre</a
+          ><a
+            href="https://github.com/JefersonAlvesrs"
+            target="_blank"
+            rel="noopener"
+            >Desenvolvido por Jeferson Alves ↗</a
+          >
+        </div>
+      </div>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
